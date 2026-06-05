@@ -2,348 +2,361 @@
 
 # 🌐 Supa.NET!
 
-### Community WiFi Marketplace.
+### community wifi marketplace.
 
-*Transforming Neighbourhood Networks into a Shared Digital Utility*
+*transforming neighbourhood networks into a shared digital utility*
 
 ---
 
-[![Status](https://img.shields.io/badge/Status-Concept%20%2F%20Early%20Stage-amber?style=flat-square)](.)
-[![Location](https://img.shields.io/badge/Origin-Kampala%2C%20Uganda-blue?style=flat-square)](.)
-[![Model](https://img.shields.io/badge/Model-Community%20WiFi%20Mesh-green?style=flat-square)](.)
-[![License](https://img.shields.io/badge/License-Proprietary-lightgrey?style=flat-square)](.)
+[![Status](https://img.shields.io/badge/status-concept%20%2F%20early%20stage-amber?style=flat-square)](.)
+[![Location](https://img.shields.io/badge/origin-kampala%2C%20uganda-blue?style=flat-square)](.)
+[![Model](https://img.shields.io/badge/model-community%20wifi%20mesh-green?style=flat-square)](.)
+[![License](https://img.shields.io/badge/license-proprietary-lightgrey?style=flat-square)](.)
 
 </div>
 
 ---
 
-## Table of Contents
+## table of contents
 
-1. [The Problem](#1-the-problem)
-2. [The Vision](#2-the-vision)
-3. [How It Works](#3-how-it-works)
-4. [The Supernet Explained](#4-the-supernet-explained)
-5. [Market Opportunity](#5-market-opportunity)
-6. [Business Model](#6-business-model)
-7. [Product Architecture](#7-product-architecture)
-8. [Go-to-Market Strategy](#8-go-to-market-strategy)
-9. [Challenges & Mitigations](#9-challenges--mitigations)
-10. [Competitive Landscape](#10-competitive-landscape)
-11. [Technology Stack](#11-technology-stack)
-12. [Resource Requirements](#12-resource-requirements)
-13. [The Bigger Vision](#13-the-bigger-vision)
-14. [Next Steps](#14-next-steps)
+(i). [the problem](#i-the-problem)
+
+(ii). [the vision](#ii-the-vision)
+
+(iii). [how it works](#iii-how-it-works)
+
+(iv). [the supernet explained](#iv-the-supernet-explained)
+
+(v). [market opportunity](#v-market-opportunity)
+
+(vi). [business model](#vi-business-model)
+
+(vii). [product architecture](#vii-product-architecture)
+
+(viii). [go-to-market strategy](#viii-go-to-market-strategy)
+
+(ix). [challenges & mitigations](#ix-challenges--mitigations)
+
+(x). [competitive landscape](#x-competitive-landscape)
+
+(xi). [technology stack](#xi-technology-stack)
+
+(xii). [resource requirements](#xii-resource-requirements)
+
+(xiii). [the bigger vision](#xiii-the-bigger-vision)
+
+(xiv). [next steps](#xiv-next-steps)
 
 ---
 
-## 1. The Problem
+## (i). the problem
 
-Internet in Uganda is still too expensive — not because the infrastructure doesn't exist, and not because the providers aren't there. MTN, Airtel, and Liquid Telecom are all present. Unlimited packages exist. The issue is a fundamental mismatch between the **unit of purchase** and the **unit of need**.
+internet in uganda is still too expensive — not because the infrastructure doesn't exist, and not because the providers aren't there. MTN, Airtel, and Liquid Telecom are all present. unlimited packages exist. the issue is a fundamental mismatch between the **unit of purchase** and the **unit of need**.
 
-Every household buys their own subscription. Individually. Every month. Even though:
+every household buys their own subscription. individually. every month. even though:
 
-- A neighbour's WiFi signal already reaches your home
-- Unlimited packages are routinely underutilised (often below 40% capacity)
-- The subscription one household pays for could comfortably serve several
-- Mobile data as a fallback is expensive and inconsistent
+- a neighbour's wifi signal already reaches your home
+- unlimited packages are routinely underutilised (often below 40% capacity)
+- the subscription one household pays for could comfortably serve several
+- mobile data as a fallback is expensive and inconsistent
 
-### The Coordination Problem
+### the coordination problem
 
-Informal WiFi sharing already happens everywhere in Kampala. Neighbours already exchange passwords. Relatives already share subscriptions. But informal sharing has critical limitations:
+informal wifi sharing already happens everywhere in Kampala. neighbours already exchange passwords. relatives already share subscriptions. but informal sharing has critical limitations:
 
-| Limitation | Why It Matters |
+| limitation | why it matters |
 |---|---|
-| **No fairness** | One household pays; others ride for free |
-| **No limits** | The paying subscriber's speeds suffer with no usage controls |
-| **No trust layer** | Sharing a home password exposes personal devices on the network |
-| **No scale** | The arrangement stays small, personal, and fragile |
+| **no fairness** | one household pays; others ride for free |
+| **no limits** | the paying subscriber's speeds suffer with no usage controls |
+| **no trust layer** | sharing a home password exposes personal devices on the network |
+| **no scale** | the arrangement stays small, personal, and fragile |
 
-> **The Gap:** There is no platform that makes informal WiFi sharing formal, fair, safe, and scalable. That gap is the Supa.NET! opportunity.
-
----
-
-## 2. The Vision
-
-> *"The infrastructure for affordable internet already exists physically in Kampala's neighbourhoods. The signals are already in the air. The subscriptions are already being paid for. Supa.NET! is the coordination layer that transforms overlapping private networks into one shared public utility."*
-
-**Supa.NET!** is a community-powered WiFi marketplace. It enables households with active unlimited internet subscriptions to share their connectivity with verified neighbours and city residents — earning passive income in return. Roaming users pay a single affordable Supa.NET! subscription and gain seamless access to any host network in the city — no passwords, no friction.
+> **the gap:** there is no platform that makes informal wifi sharing formal, fair, safe, and scalable. that gap is the Supa.NET! opportunity.
 
 ---
 
-## 3. How It Works
+## (ii). the vision
+
+> *"the infrastructure for affordable internet already exists physically in Kampala's neighbourhoods. the signals are already in the air. the subscriptions are already being paid for. Supa.NET! is the coordination layer that transforms overlapping private networks into one shared public utility."*
+
+**Supa.NET!** is a community-powered wifi marketplace. it enables households with active unlimited internet subscriptions to share their connectivity with verified neighbours and city residents — earning passive income in return. roaming users pay a single affordable Supa.NET! subscription and gain seamless access to any host network in the city — no passwords, no friction.
+
+---
+
+## (iii). how it works
 
 Supa.NET! is built on a simple three-sided model:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        SUPA.NET! PLATFORM                       │
-│         Authentication · Billing · Trust · Management          │
+│                        Supa.NET! platform                       │
+│         authentication · billing · trust · management          │
 └──────────────────┬───────────────────────────┬──────────────────┘
                    │                           │
          ┌─────────▼────────┐       ┌──────────▼─────────┐
-         │      HOSTS        │       │      ROAMERS        │
+         │      hosts        │       │      roamers        │
          │                  │       │                     │
-         │  Share existing  │       │  Pay one affordable │
-         │  unlimited WiFi  │       │  subscription and   │
+         │  share existing  │       │  pay one affordable │
+         │  unlimited wifi  │       │  subscription and   │
          │  subscriptions   │       │  connect anywhere   │
          │                  │       │                     │
-         │  → Earn passive  │       │  → No passwords     │
-         │    income        │       │  → No friction      │
+         │  → earn passive  │       │  → no passwords     │
+         │    income        │       │  → no friction      │
          └──────────────────┘       └─────────────────────┘
 ```
 
-| Participant | Role | Value Received |
+| participant | role | value received |
 |---|---|---|
-| **Host** | Shares existing unlimited subscription via a Supa.NET!-managed access point | Passive monthly income; effective internet cost drops to zero — or profit |
-| **Roamer** | Pays a single Supa.NET! subscription | Affordable internet access on any host network in range |
-| **Supa.NET!** | Manages authentication, billing, isolation, and quality | Platform revenue from subscription and commission splits |
+| **host** | shares existing unlimited subscription via a Supa.NET!-managed access point | passive monthly income; effective internet cost drops to zero — or profit |
+| **roamer** | pays a single Supa.NET! subscription | affordable internet access on any host network in range |
+| **Supa.NET!** | manages authentication, billing, isolation, and quality | platform revenue from subscription and commission splits |
 
 ---
 
-## 4. The Supernet Explained
+## (iv). the supernet explained
 
-The name reflects a genuine technical architecture.
+the name reflects a genuine technical architecture.
 
-A **supernet**, in the context of Supa.NET!, is a **virtual overlay network** — multiple independent WiFi access points unified under one login, one billing system, and one user identity.
+a **supernet**, in the context of Supa.NET!, is a **virtual overlay network** — multiple independent wifi access points unified under one login, one billing system, and one user identity.
 
-A roamer authenticates once with their Supa.NET! credentials. The underlying physical host network becomes invisible. From the roamer's perspective, there is one network: **Supa.NET!**
+a roamer authenticates once with their Supa.NET! credentials. the underlying physical host network becomes invisible. from the roamer's perspective, there is one network: **Supa.NET!**
 
-This is structurally identical to how international airport WiFi chains, hotel groups, and national hotspot operators work — but built **community-first**, from the neighbourhood up.
+this is structurally identical to how international airport wifi chains, hotel groups, and national hotspot operators work — but built **community-first**, from the neighbourhood up.
 
-### Network Isolation — The Trust Foundation
+### network isolation — the trust foundation
 
-The feature that makes host participation viable is **mandatory network isolation**. Every Supa.NET! access point separates roamer traffic from the host's personal home network at the router level (VLAN separation).
+the feature that makes host participation viable is **mandatory network isolation**. every Supa.NET! access point separates roamer traffic from the host's personal home network at the router level (VLAN separation).
 
 ```
-[ ISP Modem / Router ]   ←  provided by MTN / Airtel / Liquid
+[ ISP modem / router ]   ←  provided by MTN / Airtel / Liquid
           │
-[ Supa.NET! MikroTik Node ]   ←  installed & managed by Supa.NET!
+[ Supa.NET! MikroTik node ]   ←  installed & managed by Supa.NET!
           │
     ┌─────┴──────┐
     │            │
-[ HOME ]    [ SUPA.NET! ]
- Network      Hotspot SSID
+[ home ]    [ Supa.NET! ]
+ network      hotspot SSID
     │               │
-Host's         Verified
-personal       Roamers
+host's         verified
+personal       roamers
 devices        only
 ```
 
-> ⚠️ **Critical Principle:** A host's personal network — their laptop, phone, smart TV, and home devices — is **never** on the same network as a roaming user. This is non-negotiable and enforced at the hardware level.
+> ⚠️ **critical principle:** a host's personal network — their laptop, phone, smart TV, and home devices — is **never** on the same network as a roaming user. this is non-negotiable and enforced at the hardware level.
 
 ---
 
-## 5. Market Opportunity
+## (v). market opportunity
 
-### Why Uganda, Why Now
+### why uganda, why now
 
-- Uganda's internet penetration is growing at one of the fastest rates in Sub-Saharan Africa
-- Unlimited WiFi packages are now commercially available from multiple providers across Kampala
-- Smartphone ownership is accelerating, creating natural roamer demand
+- uganda's internet penetration is growing at one of the fastest rates in Sub-Saharan Africa
+- unlimited wifi packages are now commercially available from multiple providers across Kampala
+- smartphone ownership is accelerating, creating natural roamer demand
 - MTN MoMo and Airtel Money provide frictionless payment infrastructure already embedded in daily life
-- Urban density in Kampala means WiFi signals from neighbouring homes genuinely overlap — the physical mesh **already exists**
+- urban density in Kampala means wifi signals from neighbouring homes genuinely overlap — the physical mesh **already exists**
 
-### Addressable Market Segments
+### addressable market segments
 
-| Segment | Profile | Supa.NET! Role |
+| segment | profile | Supa.NET! role |
 |---|---|---|
-| **Urban Households** | Kampala residents with limited internet budgets | Roamers — pay less for reliable access |
-| **Unlimited Subscribers** | MTN/Airtel/Liquid subscribers with underutilised packages | Hosts — earn from idle bandwidth |
-| **Students** | University and secondary school students needing data | Roamers — affordable access near campuses |
-| **Small Businesses** | Boda stages, kiosks, salons, waiting areas | Hosts with foot traffic earn; customers benefit |
-| **Corporates** | Companies with staff who travel the city | Business accounts — city-wide staff connectivity |
+| **urban households** | Kampala residents with limited internet budgets | roamers — pay less for reliable access |
+| **unlimited subscribers** | MTN/Airtel/Liquid subscribers with underutilised packages | hosts — earn from idle bandwidth |
+| **students** | university and secondary school students needing data | roamers — affordable access near campuses |
+| **small businesses** | boda stages, kiosks, salons, waiting areas | hosts with foot traffic earn; customers benefit |
+| **corporates** | companies with staff who travel the city | business accounts — city-wide staff connectivity |
 
 ---
 
-## 6. Business Model
+## (vi). business model
 
-### Revenue Streams
+### revenue streams
 
-| Stream | Description |
+| stream | description |
 |---|---|
-| **Roamer Subscriptions** | Daily, weekly, and monthly passes sold to end users |
-| **Host Commission Split** | Platform retains 30–40% of all roamer revenue attributed to a host node |
-| **Business Accounts** | Flat monthly corporate plans for employee city-wide roaming |
-| **ISP Partnership Revenue** | Revenue share with ISPs for driving subscriber retention and data volume |
-| **Premium Host Tiers** | Hosts with better uptime or hardware earn more — incentivising quality |
+| **roamer subscriptions** | daily, weekly, and monthly passes sold to end users |
+| **host commission split** | platform retains 30–40% of all roamer revenue attributed to a host node |
+| **business accounts** | flat monthly corporate plans for employee city-wide roaming |
+| **ISP partnership revenue** | revenue share with ISPs for driving subscriber retention and data volume |
+| **premium host tiers** | hosts with better uptime or hardware earn more — incentivising quality |
 
-### Unit Economics — Illustrative Model
+### unit economics — illustrative model
 
-> *For a single active host node:*
+> *for a single active host node:*
 
-| Item | Illustrative Figure |
+| item | illustrative figure |
 |---|---|
-| Host's monthly ISP subscription cost | UGX 150,000 |
-| Active roamers on this node (monthly) | 15 unique users |
-| Average roamer spend per month | UGX 25,000 |
-| **Gross revenue from node** | **UGX 375,000** |
-| Host's share (65%) | UGX 243,750 |
+| host's monthly ISP subscription cost | UGX 150,000 |
+| active roamers on this node (monthly) | 15 unique users |
+| average roamer spend per month | UGX 25,000 |
+| **gross revenue from node** | **UGX 375,000** |
+| host's share (65%) | UGX 243,750 |
 | Supa.NET! platform share (35%) | UGX 131,250 |
-| **Host's net gain after ISP cost** | **UGX 93,750 profit per month** |
-| **Host's effective internet cost** | **Free — plus income** |
+| **host's net gain after ISP cost** | **UGX 93,750 profit per month** |
+| **host's effective internet cost** | **free — plus income** |
 
-At scale, a host earns passive income while their own internet subscription becomes economically self-sustaining. This is the primary host acquisition argument.
+at scale, a host earns passive income while their own internet subscription becomes economically self-sustaining. this is the primary host acquisition argument.
 
 ---
 
-## 7. Product Architecture
+## (vii). product architecture
 
-### Core Components
+### core components
 
-| Component | Description |
+| component | description |
 |---|---|
-| **Supa.NET! Router Node** | MikroTik-based access point at each host location. Manages dual SSID, VLAN isolation, bandwidth throttling, and captive portal auth. Sits behind the existing ISP router — no ISP equipment changes needed. |
-| **Captive Portal / Auth Layer** | When a roamer connects to any Supa.NET! SSID, the system silently verifies their subscription status before granting access. No passwords exchanged between host and roamer. |
-| **Host Dashboard** | Web and mobile portal for hosts to monitor earnings, active users, bandwidth usage, and payout history. |
-| **Roamer App** | Mobile app showing nearby Supa.NET! hotspots, subscription management, and seamless auto-connect. |
-| **Central Management Platform** | Backend system for firmware updates, node health monitoring, billing management, and automated MoMo payouts to hosts. |
-| **Payments Integration** | MTN Mobile Money and Airtel Money for both subscription collection and host payout disbursement. |
+| **Supa.NET! router node** | MikroTik-based access point at each host location. manages dual SSID, VLAN isolation, bandwidth throttling, and captive portal auth. sits behind the existing ISP router — no ISP equipment changes needed. |
+| **captive portal / auth layer** | when a roamer connects to any Supa.NET! SSID, the system silently verifies their subscription status before granting access. no passwords exchanged between host and roamer. |
+| **host dashboard** | web and mobile portal for hosts to monitor earnings, active users, bandwidth usage, and payout history. |
+| **roamer app** | mobile app showing nearby Supa.NET! hotspots, subscription management, and seamless auto-connect. |
+| **central management platform** | backend system for firmware updates, node health monitoring, billing management, and automated MoMo payouts to hosts. |
+| **payments integration** | MTN Mobile Money and Airtel Money for both subscription collection and host payout disbursement. |
 
 ---
 
-## 8. Go-to-Market Strategy
+## (viii). go-to-market strategy
 
-### Phase 1 — Neighbourhood Proof of Concept *(Months 1–3)*
+### phase (i) — neighbourhood proof of concept *(months 1–3)*
 
-> Validate the model. Manual everything. One neighbourhood.
+> validate the model. manual everything. one neighbourhood.
 
-- Recruit **3–5 willing hosts** within one neighbourhood
-- Deploy MikroTik nodes; set up manual voucher-based access
-- Collect payments via MoMo manually; pay host cuts manually
-- ✅ **Success metric:** 15+ paying roamers within 60 days
+- recruit **3–5 willing hosts** within one neighbourhood
+- deploy MikroTik nodes; set up manual voucher-based access
+- collect payments via MoMo manually; pay host cuts manually
+- ✅ **success metric:** 15+ paying roamers within 60 days
 
-### Phase 2 — Platform Build *(Months 4–9)*
+### phase (ii) — platform build *(months 4–9)*
 
-> Build the product on proven demand.
+> build the product on proven demand.
 
-- Develop Host Dashboard, Roamer App, and Central Auth Platform
-- Automate MoMo billing and host payouts
-- Implement captive portal authentication at hardware level
-- Expand to **3 neighbourhoods** in Kampala
-- ✅ **Success metric:** 10+ active host nodes, 200+ roamer subscribers
+- develop host dashboard, roamer app, and central auth platform
+- automate MoMo billing and host payouts
+- implement captive portal authentication at hardware level
+- expand to **3 neighbourhoods** in Kampala
+- ✅ **success metric:** 10+ active host nodes, 200+ roamer subscribers
 
-### Phase 3 — ISP Engagement & City Scale *(Months 10–18)*
+### phase (iii) — ISP engagement & city scale *(months 10–18)*
 
-> Formalise the model. Expand aggressively.
+> formalise the model. expand aggressively.
 
-- Approach MTN, Airtel, and Liquid with traction data — propose **licensed reseller or partner model**
-- Introduce tiered roamer plans (hourly, daily, monthly, corporate)
-- Add host quality ratings and service level indicators
-- Expand to bodaboda stages, markets, clinics, and schools
-- ✅ **Success metric:** 100+ host nodes, 2,000+ active subscribers
+- approach MTN, Airtel, and Liquid with traction data — propose **licensed reseller or partner model**
+- introduce tiered roamer plans (hourly, daily, monthly, corporate)
+- add host quality ratings and service level indicators
+- expand to bodaboda stages, markets, clinics, and schools
+- ✅ **success metric:** 100+ host nodes, 2,000+ active subscribers
 
-### Phase 4 — Regional Expansion *(18+ Months)*
+### phase (iv) — regional expansion *(18+ months)*
 
-> Export the model.
+> export the model.
 
-- Replicate in Entebbe, Jinja, Mbarara, Gulu
-- Launch corporate account product for city-wide employee roaming
-- **License the Supa.NET! platform** to operators in Nairobi, Dar es Salaam, and Kigali
-- Explore partnerships with national broadband expansion programmes
+- replicate in Entebbe, Jinja, Mbarara, Gulu
+- launch corporate account product for city-wide employee roaming
+- **license the Supa.NET! platform** to operators in Nairobi, Dar es Salaam, and Kigali
+- explore partnerships with national broadband expansion programmes
 
 ---
 
-## 9. Challenges & Mitigations
+## (ix). challenges & mitigations
 
-| Challenge | Risk Level | Mitigation |
+| challenge | risk level | mitigation |
 |---|:---:|---|
-| **ISP Terms of Service** — most unlimited packages prohibit commercial reselling | 🔴 High | Early ISP engagement; structure as a partnership, not a resale; pursue formal licensed agreements |
-| **Host trust & privacy** — hosts fear strangers accessing their home network | 🔴 High | Mandatory VLAN isolation at hardware level; market this as the core safety feature |
-| **Network quality variance** — different hosts offer very different speeds | 🟡 Medium | Host quality ratings; bandwidth guarantees enforced by platform; tiered pricing by quality |
-| **Chicken-and-egg problem** — need hosts before roamers; need roamers before hosts see value | 🟡 Medium | Hyper-local launch — seed each neighbourhood densely before moving to the next |
-| **Technical complexity for hosts** — non-technical users need to install equipment | 🟡 Medium | Supa.NET! owns, installs, and remotely manages all hardware; host involvement is near-zero |
-| **Regulatory uncertainty** — telecoms regulation in Uganda may evolve | 🟢 Low–Med | Proactive engagement with Uganda Communications Commission (UCC) from early stage |
-| **Payment reliability** — MoMo transactions can fail or delay | 🟢 Low | Multi-provider MoMo integration; automatic retry logic; clear payout schedules |
+| **ISP terms of service** — most unlimited packages prohibit commercial reselling | 🔴 high | early ISP engagement; structure as a partnership, not a resale; pursue formal licensed agreements |
+| **host trust & privacy** — hosts fear strangers accessing their home network | 🔴 high | mandatory VLAN isolation at hardware level; market this as the core safety feature |
+| **network quality variance** — different hosts offer very different speeds | 🟡 medium | host quality ratings; bandwidth guarantees enforced by platform; tiered pricing by quality |
+| **chicken-and-egg problem** — need hosts before roamers; need roamers before hosts see value | 🟡 medium | hyper-local launch — seed each neighbourhood densely before moving to the next |
+| **technical complexity for hosts** — non-technical users need to install equipment | 🟡 medium | Supa.NET! owns, installs, and remotely manages all hardware; host involvement is near-zero |
+| **regulatory uncertainty** — telecoms regulation in Uganda may evolve | 🟢 low–med | proactive engagement with Uganda Communications Commission (UCC) from early stage |
+| **payment reliability** — MoMo transactions can fail or delay | 🟢 low | multi-provider MoMo integration; automatic retry logic; clear payout schedules |
 
 ---
 
-## 10. Competitive Landscape
+## (x). competitive landscape
 
-No operator in Uganda currently offers a **community-owned, income-generating WiFi sharing network** with automatic authentication, MoMo payments, and network isolation. This is Supa.NET!'s white space.
+no operator in Uganda currently offers a **community-owned, income-generating wifi sharing network** with automatic authentication, MoMo payments, and network isolation. this is Supa.NET!'s white space.
 
-| Operator | Model | Geography | Why Supa.NET! Is Different |
+| operator | model | geography | why Supa.NET! is different |
 |---|---|---|---|
-| **Fon** | Home router sharing cooperative | Europe, global | ISP-partnered from inception; Supa.NET! is community-first with ISP partnership as a later stage |
-| **Karma WiFi** | Pay-per-use shared hotspot network | United States | US market; no MoMo-native payments; not built for African urban density |
-| **MTN WiFi Zones** | ISP-operated public hotspots | Uganda | Fixed locations only; not community-distributed; no income for participants |
-| **Airtel Public WiFi** | ISP-operated hotspots | Uganda | Same limitation — centrally owned, not community-distributed or income-generating |
+| **Fon** | home router sharing cooperative | Europe, global | ISP-partnered from inception; Supa.NET! is community-first with ISP partnership as a later stage |
+| **Karma WiFi** | pay-per-use shared hotspot network | United States | US market; no MoMo-native payments; not built for African urban density |
+| **MTN WiFi Zones** | ISP-operated public hotspots | Uganda | fixed locations only; not community-distributed; no income for participants |
+| **Airtel Public WiFi** | ISP-operated hotspots | Uganda | same limitation — centrally owned, not community-distributed or income-generating |
 
 ---
 
-## 11. Technology Stack
+## (xi). technology stack
 
-### Why MikroTik for Host Hardware
+### why MikroTik for host hardware
 
-Consumer-grade routers provided by ISPs are designed for simplicity, not programmability. They cannot:
+consumer-grade routers provided by ISPs are designed for simplicity, not programmability. they cannot:
 
-- Run a captive portal
-- Enforce VLAN isolation programmatically
-- Be remotely managed via API
-- Throttle bandwidth per user class
+- run a captive portal
+- enforce VLAN isolation programmatically
+- be remotely managed via API
+- throttle bandwidth per user class
 
 **MikroTik RouterOS** provides all of these natively, at a cost of approximately **UGX 150,000–300,000** per unit — well within the unit economics of the model.
 
-| Capability Required | MikroTik Support |
+| capability required | MikroTik support |
 |---|:---:|
-| Captive portal / subscriber authentication | ✅ Native (HotSpot Manager built-in) |
-| VLAN isolation (home vs. roamer network) | ✅ Hardware-enforced |
-| Remote API management | ✅ Full REST and Winbox API |
-| Per-user bandwidth throttling | ✅ Queue Trees — granular control |
-| Multiple SSID broadcast | ✅ Full support |
-| Deployment behind existing ISP router | ✅ No ISP equipment changes required |
+| captive portal / subscriber authentication | ✅ native (HotSpot Manager built-in) |
+| VLAN isolation (home vs. roamer network) | ✅ hardware-enforced |
+| remote API management | ✅ full REST and Winbox API |
+| per-user bandwidth throttling | ✅ Queue Trees — granular control |
+| multiple SSID broadcast | ✅ full support |
+| deployment behind existing ISP router | ✅ no ISP equipment changes required |
 
 MikroTik devices are widely used across Uganda and East Africa, with a strong local technician ecosystem and parts availability on **Kampala's Nasser Road**.
 
 ---
 
-## 12. Resource Requirements
+## (xii). resource requirements
 
-> *Phase 1 & 2 seed estimates — conceptual range pending Phase 1 validation*
+> *phase (i) & (ii) seed estimates — conceptual range pending phase (i) validation*
 
-| Resource | Estimated Cost (UGX) |
+| resource | estimated cost (UGX) |
 |---|---|
-| MikroTik nodes — Phase 1 pilot (10 hosts) | 2,000,000 – 3,000,000 |
-| Software development (Platform, Apps, Auth) | 15,000,000 – 40,000,000 |
+| MikroTik nodes — phase (i) pilot (10 hosts) | 2,000,000 – 3,000,000 |
+| software development (platform, apps, auth) | 15,000,000 – 40,000,000 |
 | MoMo integration & payment setup | 1,000,000 – 2,000,000 |
-| Operations & field installation (Phase 1) | 1,000,000 – 2,000,000 |
-| Legal & regulatory consultation (UCC) | 2,000,000 – 5,000,000 |
-| Marketing & host acquisition (Phase 1) | 1,000,000 – 3,000,000 |
-| **Total estimated Phase 1–2 seed requirement** | **22,000,000 – 55,000,000** |
+| operations & field installation (phase (i)) | 1,000,000 – 2,000,000 |
+| legal & regulatory consultation (UCC) | 2,000,000 – 5,000,000 |
+| marketing & host acquisition (phase (i)) | 1,000,000 – 3,000,000 |
+| **total estimated phase (i)–(ii) seed requirement** | **22,000,000 – 55,000,000** |
 
 ---
 
-## 13. The Bigger Vision
+## (xiii). the bigger vision
 
-Supa.NET! is designed from the outset to be **replicable**. Every neighbourhood in every Ugandan city has the same structural conditions: overlapping WiFi signals, underutilised unlimited subscriptions, and a community of people paying more collectively than they need to.
+Supa.NET! is designed from the outset to be **replicable**. every neighbourhood in every Ugandan city has the same structural conditions: overlapping wifi signals, underutilised unlimited subscriptions, and a community of people paying more collectively than they need to.
 
-The Kampala proof of concept is not the product — it is the **template**.
+the Kampala proof of concept is not the product — it is the **template**.
 
 ```
-Kampala Neighbourhood Pilot
+Kampala neighbourhood pilot
          ↓
-Other Kampala Neighbourhoods (Ntinda, Bukoto, Kansanga, Naalya)
+other Kampala neighbourhoods (Ntinda, Bukoto, Kansanga, Naalya)
          ↓
-Secondary Ugandan Cities (Jinja, Mbarara, Gulu, Masaka, Mbale)
+secondary Ugandan cities (Jinja, Mbarara, Gulu, Masaka, Mbale)
          ↓
-East African Markets (Nairobi, Dar es Salaam, Kigali, Lusaka)
+East African markets (Nairobi, Dar es Salaam, Kigali, Lusaka)
          ↓
-Platform Licensing — Supa.NET! as an OS for community WiFi operators globally
+platform licensing — Supa.NET! as an OS for community wifi operators globally
 ```
 
-> **The Long-Term Opportunity:** If even 1% of households in Kampala become Supa.NET! hosts, and each host serves 10 roamers, Supa.NET! becomes the largest distributed WiFi network in Uganda — built not by a telecom company, but by **the community itself**.
+> **the long-term opportunity:** if even 1% of households in Kampala become Supa.NET! hosts, and each host serves 10 roamers, Supa.NET! becomes the largest distributed wifi network in Uganda — built not by a telecom company, but by **the community itself**.
 
 ---
 
-## 14. Next Steps
+## (xiv). next steps
 
-The single most important thing Supa.NET! can do right now is **validate the economics in the real world** before building anything complex.
+the single most important thing Supa.NET! can do right now is **validate the economics in the real world** before building anything complex.
 
-- [ ] Identify **5 founding host households** in one Kampala neighbourhood
-- [ ] Install MikroTik nodes and configure manual voucher-based access
-- [ ] Onboard first paying roamers via word of mouth
-- [ ] Run manual MoMo billing and host payouts for 60 days
-- [ ] Document what works, what breaks, and what people actually pay
-- [ ] Build the platform on proven demand
+- [ ] (i). identify **5 founding host households** in one Kampala neighbourhood
+- [ ] (ii). install MikroTik nodes and configure manual voucher-based access
+- [ ] (iii). onboard first paying roamers via word of mouth
+- [ ] (iv). run manual MoMo billing and host payouts for 60 days
+- [ ] (v). document what works, what breaks, and what people actually pay
+- [ ] (vi). build the platform on proven demand
 
 ---
 
@@ -353,9 +366,8 @@ The single most important thing Supa.NET! can do right now is **validate the eco
 
 *Supa.NET! — Kampala, Uganda — 2025*
 
-*This is a community utility, built by the community, for the community.*
+*this is a community utility, built by the community, for the community.*
 
 ---
 
 </div>
-
